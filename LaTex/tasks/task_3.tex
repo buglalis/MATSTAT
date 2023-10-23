@@ -1,0 +1,77 @@
+    \subsection{Т3}
+
+\textbf{Задание:}
+Случайная велечина имеет экспоненциальное распределение
+\begin{equation*}
+    p(x) = \left\{\begin{aligned}
+        \frac{e^{-\frac{x}{\theta}}}{\theta}, \;\;\;x\geqslant0\\
+        0, \;\;\;x<0
+\end{aligned}\right. \\
+\;,\theta > 0
+\end{equation*}
+По выборке объема n = 3 найдены оценки параметра \\
+\begin{equation*}
+    \theta : \tilde\theta_1 = 2\overline{x}, \;\;
+             \tilde\theta_2 = \frac{x_{min} + x_{min}}{2}, \;\;
+             \tilde\theta_3 = x_2
+\end{equation*}
+a) Проверить оценки на несмещенность. Исправить эти оценки, если необходимо. Какая из исправленных оценок более эффективна,\\
+b) Исследовать эти оценки на эффективность с помощью неравенства Крамера-Рао.
+
+\subsubsection{Пункт <<a>>}
+\vspace{1.5mm}
+\textbf{1:} 
+$\tilde\theta_1 = \overline{x}$ \\
+\begin{equation*}
+    M_{\tilde\theta_1} = \frac{1}{n}\sum_{i=1}^{n}M[x_i]
+    = \frac{n}{n}\int_{0}^{+\infty}x\frac{e^{-\frac{x}{\theta}}}{\theta}\mathrm{d}x = 
+\end{equation*}
+\begin{center}
+    Замена $t = \frac{x}{\theta}$
+\end{center}
+\begin{equation*}
+    = \theta\int_{0}^{+\infty}te^{-t}\mathrm{d}x 
+    = -\theta\left(te^{-t}\bigg|_{0}^{\infty} - \int_{0}^{+\infty}e^{-t}\mathrm{d}x\right)
+    = \theta 
+\end{equation*}
+$\Rightarrow$ \textbf{несмещённая}
+\vspace{1.5mm}
+\begin{equation*}
+    M[{x_i}^2] = \sum_{i=1}^{n}M[{x_i}^2] 
+    = \theta^2\left(-t^2e^{-t}\bigg|_{0}^{\infty} + 2\int_{0}^{+\infty}te^{-t}\mathrm{d}x\right)
+    = 2\theta^2
+\end{equation*}
+\vspace{1.5mm}
+\begin{equation*}
+    D[x_i] = 2\theta^2 - \theta^2
+    = \theta^2
+\end{equation*}
+\vspace{1.5mm}
+\begin{equation*}
+    D[{\tilde\theta_1}] = \frac{1}{n^2}\sum_{i=1}^{n}D[x_i]
+    = \frac{1}{3}\theta^2
+\end{equation*}
+\vspace{2.5mm}
+
+\textbf{2:} 
+$\tilde\theta_1 = \tilde\theta_2 = \frac{x_{min} + x_{min}}{2}$ \\
+Для плотности распределения $x_{min}$ и $x_{max}$ нужна функция распределения\\
+\begin{equation*}
+    F(x) = \int_{-\infty}^{x}p(u)du
+    = \int_{-\infty}^{x}\frac{e^{-\frac{u}{\theta}}}{\theta}du =
+\end{equation*}
+\begin{center}
+    Замена $\tau = \frac{u}{\theta}$
+\end{center}
+\begin{equation*}
+    F(x) = \int_{0}^{\frac{x}{\theta}}e^{-\tau}d\tau
+    = -e^{-\tau}\bigg|_{0}^{\frac{x}{\theta}} 
+    = 1 - e^{-\frac{x}{\theta}}
+\end{equation*}
+\vspace{2.5mm}
+
+\textbf{Тогда для $x_{min}:$}\\
+\begin{equation*}
+    p(y) = n(1- F(y))^{n-1}p(x=y)
+    = n(-e^{-\frac{x}{\theta}})^{n-1}\frac{e^{-\frac{x}{\theta}}}{\theta}
+\end{equation*}

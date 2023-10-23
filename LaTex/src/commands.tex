@@ -1,0 +1,63 @@
+% add (renew) commands
+
+\renewcommand{\Im}{\mathop{\mathrm{Im}}\nolimits}
+\renewcommand{\Re}{\mathop{\mathrm{Re}}\nolimits}
+
+\renewcommand{\d}{\, d}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\l}{\left}
+\renewcommand{\r}{\right}
+
+\newcommand{\vc}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\T}{^{\text{T}}}
+
+
+\newcommand{\diag}{\mathop{\mathrm{diag}}\nolimits}
+\newcommand{\cl}{\mathop{\mathrm{cl}}\nolimits}
+\newcommand{\grad}{\mathop{\mathrm{grad}}\nolimits}
+\renewcommand{\div}{\mathop{\mathrm{div}}\nolimits}
+\newcommand{\rot}{\mathop{\mathrm{rot}}\nolimits}
+\newcommand{\Ker}{\mathop{\mathrm{Ker}}\nolimits}
+\newcommand{\Spec}{\mathop{\mathrm{Spec}}\nolimits}
+\newcommand{\sign}{\mathop{\mathrm{sign}}\nolimits}
+\newcommand{\tr}{\mathop{\mathrm{tr}}\nolimits}
+\newcommand{\rg}{\mathop{\mathrm{rg}}\nolimits}
+
+
+\newcommand{\DS}{\mathcal D\left(\mathbb{R}\right)}
+\newcommand{\QED}{\textnormal{Q. E. D.}}
+\newcommand{\dseq}{\overset{\mathcal D'}{=}}
+\newcommand{\dto}{\overset{\mathcal D'}{\to}}
+
+
+\newcommand{\const}{\text{const}}
+\newcommand{\xmark}{\ding{55}}
+
+
+\newenvironment{uproof}{
+% \begin{comment}
+\par \color{ugray}
+\begin{proof}[$\triangle$]
+}{
+\end{proof} \par
+% \end{comment}
+}
+
+
+\newcommand{\bhat}{\overset{\text{\scalebox{0.8}[0.5]{\rotatebox[origin=c]{180}{$\wedge$}}}}}
+
+\newcommand{\cf}[1]{\text{\raisebox{1.5pt}{$\scalebox{1.3}{$\chi$}$}}_{#1}}
+
+\newcommand{\supp}{\mathop{\mathrm{supp}}\nolimits}
+\newcommand{\si}{\mathop{\mathrm{Si}}\nolimits}
+
+\newcommand{\rr}{\rightrightarrows}
+\newcommand{\sbs}[2]{
+\setcounter{subsection}{\numexpr #1 - 1 \relax}
+    \textcolor{ugreen}{
+        \subsection{#2}
+        }
+}
+
+\newcommand{\integral}[4]{\int\limits^{#1}_{#2}\int\limits^{#3}_{#4}}
